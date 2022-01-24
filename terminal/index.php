@@ -12,8 +12,6 @@ $ref = $_SERVER['HTTP_REFERER'];
 $hostname = gethostbyaddr($_SERVER['REMOTE_ADDR']);
 $today = date("F j, Y, g:i a");
 
-jsbfsdbgsd
-
  
 //Print IP, Hostname, Port Number, User Agent, Date/Time and Referer To data.txt
  
