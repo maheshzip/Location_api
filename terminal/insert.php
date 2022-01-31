@@ -8,30 +8,33 @@
 </head>
 <body>
     <?php
-        $server = "localhost";
-        $username = "root";
-        $password = "";
-        $dbname = 'test';
+        
 
-        //Create connection
-        $mysqli = new mysqli($server, $username, $password, $dbname);
+        
+$server = "	sql109.epizy.com";
+$username = "epiz_30929376";
+$password = "n6aBvke8xSg";
+$dbname = 'epiz_30929376_test';
 
-        //check connection
-        if ($mysqli->connect_error)
-        {
-            die("Connection error: " . $mysqli->connect_error);
-        }
+//Create connection
+$mysqli = new mysqli($server, $username, $password, $dbname);
 
-        $query = "INSERT INTO table1 (protocol, port, agent, ref, hostname)
-        VALUES ('wihsjk','jfhdsjfhdsk','gajdh','hgdfhdfk','ddghjdg')";
+//check connection
+if ($mysqli->connect_error)
+{
+    die("Connection error: " . $mysqli->connect_error);
+}
 
-        if ($mysqli->query($query)===TRUE){
-            echo "New record created successfully";
-        }else{
-            echo "Error: " . $mysqli->error;
-        }
+$query = "INSERT INTO table1 (protocol, port, agent, ref, hostname, ipadd)
+VALUES ('$protocol','$port','$agent','$ref','$hostname','$ip')";
 
-        $mysqli->close();
+if ($mysqli->query($query)===TRUE){
+    echo "New record created successfully";
+}else{
+    echo "Error: " . $mysqli->error;
+}
+
+            $mysqli->close();
 
     ?>
 </body>
