@@ -12,10 +12,10 @@
         
 
         
-$server = "sql109.epizy.com";   
-$username = "epiz_30929376";
-$password = "n6aBvke8xSg";
-$dbname = 'epiz_30929376_test';
+$server = "localhost";   
+$username = "root";
+$password = "";
+$dbname = 'test';
 
 //Create connection
 $mysqli = new mysqli($server, $username, $password, $dbname);
