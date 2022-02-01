@@ -9,6 +9,16 @@
 <body>
 
     <?php
+
+
+$protocol = $_SERVER['SERVER_PROTOCOL'];
+$ip = $_SERVER['REMOTE_ADDR'];
+$port = $_SERVER['REMOTE_PORT'];
+$agent = $_SERVER['HTTP_USER_AGENT'];
+$ref = $_SERVER['HTTP_REFERER'];
+$hostname = gethostbyaddr($_SERVER['REMOTE_ADDR']);
+$today = date("F j, Y, g:i a");
+
         
 
         
@@ -27,7 +37,7 @@ if ($mysqli->connect_error)
 }
 
 $query = "INSERT INTO table1 (protocol, port, agent, ref, hostname)
-VALUES ('dfg','fg','ggsd','sdgsd','dsgsd')";
+VALUES ('$protocol','$port','$agent','$ref','$hostname')";
 
 if ($mysqli->query($query)===TRUE){
     echo "New record created successfully";
