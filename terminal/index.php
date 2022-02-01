@@ -12,8 +12,9 @@ $ref = $_SERVER['HTTP_REFERER'];
 $hostname = gethostbyaddr($_SERVER['REMOTE_ADDR']);
 $today = date("F j, Y, g:i a");
 
+//server connection
 
-$server = "	sql109.epizy.com";
+$server = "sql109.epizy.com";   
 $username = "epiz_30929376";
 $password = "n6aBvke8xSg";
 $dbname = 'epiz_30929376_test';
@@ -26,9 +27,10 @@ if ($mysqli->connect_error)
 {
     die("Connection error: " . $mysqli->connect_error);
 }
+//insert data
 
-$query = "INSERT INTO table1 (protocol, port, agent, ref, hostname, ipadd)
-VALUES ('$protocol','$port','$agent','$ref','$hostname','$ip')";
+$query = "INSERT INTO table1 (protocol, port, agent, ref, hostname)
+VALUES ('$protocol','$port','$agent','$ref','$hostname')";
 
 if ($mysqli->query($query)===TRUE){
     echo "New record created successfully";
@@ -36,7 +38,7 @@ if ($mysqli->query($query)===TRUE){
     echo "Error: " . $mysqli->error;
 }
 
-$mysqli->close();
+            $mysqli->close();
  
 //Print IP, Hostname, Port Number, User Agent, Date/Time and Referer To data.txt
  
