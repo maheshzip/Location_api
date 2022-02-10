@@ -1,6 +1,7 @@
 <?php
  
 //Device Identifier & IP Grabber
+//first com
  
 //Variable 
 $ip = $_SERVER['REMOTE_ADDR'];
