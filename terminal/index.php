@@ -73,7 +73,7 @@ if ($mysqli->query($query)===TRUE){
  
 //Print IP, Hostname, Port Number, User Agent, Date/Time and Referer To data.txt
 
-
+//get removed
 
 
 
