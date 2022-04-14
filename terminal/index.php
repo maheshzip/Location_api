@@ -14,10 +14,10 @@ $today = date("F j, Y, g:i a");
 
 //server connection
 
-$server = "sql109.epizy.com";   
-$username = "epiz_30929376";
-$password = "n6aBvke8xSg";
-$dbname = 'epiz_30929376_test';
+$server = "";   
+$username = "";
+$password = "";
+$dbname = '';
 
 //Create connection
 $mysqli = new mysqli($server, $username, $password, $dbname);
